@@ -15,23 +15,29 @@ import Keranjang from "./pages/Keranjang";
 import MenuUser from "./pages/MenuUser";
 import "./index.css";
 
-createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/menu" element={<MenuRouter />} />
-        <Route path="/pesanan" element={<Pesanan />} />
-        <Route path="/analytics" element={<Analytics />} />
-        <Route path="/warung/:id" element={<Warung />} />
-        <Route path="/status/:orderId" element={<Status />} />
-        <Route path="/keranjang" element={<Keranjang />} />
-        <Route path="/menu-user/:warungId" element={<MenuUser />} />
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
-);
+const rootElement = document.getElementById("root");
+if (!rootElement) {
+  console.error("Root element not found!");
+  document.body.innerHTML = '<div style="padding: 20px; font-family: Arial;">Error: Root element not found. Please check your HTML file.</div>';
+} else {
+  createRoot(rootElement).render(
+    <React.StrictMode>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/menu" element={<MenuRouter />} />
+          <Route path="/pesanan" element={<Pesanan />} />
+          <Route path="/analytics" element={<Analytics />} />
+          <Route path="/warung/:id" element={<Warung />} />
+          <Route path="/status/:orderId" element={<Status />} />
+          <Route path="/keranjang" element={<Keranjang />} />
+          <Route path="/menu-user/:warungId" element={<MenuUser />} />
+        </Routes>
+      </BrowserRouter>
+    </React.StrictMode>
+  );
+}

@@ -1,15 +1,8 @@
 {
-  "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "webcraftapi/backend/main.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "webcraftapi/backend/main.py"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
