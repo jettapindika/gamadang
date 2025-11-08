@@ -12,7 +12,7 @@ export const authService = {
         JSON.stringify({
           id: response.data.user_id,
           email: response.data.email,
-          name: response.data.name,
+          name: response.data.full_name,
         })
       );
     }

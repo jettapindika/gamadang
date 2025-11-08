@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
-import Palelu from "../assets/palelu.svg";
+import Palelu from "../assets/Palelu.svg";
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
