@@ -18,7 +18,8 @@ import "./index.css";
 const rootElement = document.getElementById("root");
 if (!rootElement) {
   console.error("Root element not found!");
-  document.body.innerHTML = '<div style="padding: 20px; font-family: Arial;">Error: Root element not found. Please check your HTML file.</div>';
+  document.body.innerHTML =
+    '<div style="padding: 20px; font-family: Arial;">Error: Root element not found. Please check your HTML file.</div>';
 } else {
   createRoot(rootElement).render(
     <React.StrictMode>

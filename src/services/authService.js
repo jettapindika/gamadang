@@ -1,10 +1,17 @@
 import api from "./api";
+import { mockApi } from "./mockApi";
+
+// Use mock API for testing (set to false when backend is ready)
+const USE_MOCK = true;
 
 // Authentication service
 export const authService = {
   // Login
   async login(email, password) {
-    const response = await api.post("/login", { email, password });
+    const response = USE_MOCK
+      ? await mockApi.login(email, password)
+      : await api.post("/login", { email, password });
+
     if (response.data.access_token) {
       localStorage.setItem("access_token", response.data.access_token);
       localStorage.setItem(
@@ -22,7 +29,9 @@ export const authService = {
 
   // Register
   async register(userData) {
-    const response = await api.post("/register", userData);
+    const response = USE_MOCK
+      ? await mockApi.register(userData)
+      : await api.post("/register", userData);
     return response.data;
   },
 

@@ -13,6 +13,7 @@ import { Separator } from "@/components/ui/separator";
 import { LogIn, Mail, Lock, ArrowRight } from "lucide-react";
 import bgImage from "@/assets/Background.svg";
 import { authService } from "@/services";
+import MockLoginInfo from "@/components/MockLoginInfo";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -100,6 +101,11 @@ const Login = () => {
           </CardHeader>
 
           <CardContent className="p-6">
+            {/* Mock Login Info */}
+            <div className="mb-4">
+              <MockLoginInfo />
+            </div>
+
             <form onSubmit={handleSubmit} className="space-y-4">
               {error && (
                 <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg text-sm">
