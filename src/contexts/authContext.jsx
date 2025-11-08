@@ -26,7 +26,7 @@ export const AuthProvider = ({ children }) => {
     setCurrentUser(null);
   };
 
-  // Listen for storage changes (in case of multiple tabs)
+  // Listen for storage changes 
   useEffect(() => {
     const handleStorageChange = () => {
       setIsLoggedIn(authService.isAuthenticated());
