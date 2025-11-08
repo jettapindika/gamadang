@@ -23,6 +23,7 @@ import {
 import bgImage from "@/assets/Background.svg";
 import { authService } from "@/services";
 
+console.log("Register component loaded");
 const Register = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
