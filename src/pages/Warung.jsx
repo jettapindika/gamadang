@@ -73,7 +73,7 @@ export default function Warung() {
         initial="hidden"
         animate="visible"
         variants={containerVariants}
-        className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 w-full max-w-6xl mx-auto mt-16 md:mt-20 mb-8 md:mb-12"
+        className="flex flex-col md:flex-row items-center justify-center gap-5 md:gap-8 w-full max-w-6xl mx-auto mt-16 md:mt-20 mb-8 md:mb-12"
       >
         {/* Box */}
         <motion.div

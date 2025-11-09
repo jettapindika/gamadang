@@ -38,7 +38,7 @@ export const Frame2 = () => {
         data.map((warung) => ({
           id: warung.id,
           name: warung.name,
-          image: warung.image_url || fotoKantin,
+          image: fotoKantin || warung.image_url,
           menuCount: warung.menu_items?.length || 0,
           description: `Menyediakan ${
             warung.menu_items?.length || 0

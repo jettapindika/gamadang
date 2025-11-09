@@ -6,10 +6,11 @@ import { Button } from "@/components/ui/button";
 
 // Import gambar kantin
 import fotoKantin from "@/assets/Foto_Kantin.svg";
-import Biogeo from "@/assets/Maskot.png";
+import Biogeo from "@/assets3/biogeo.svg";
 import Kansas from "@/assets/kss.svg";
 import Pujale from "@/assets/Pujale.svg";
 import Bonbin from "@/assets/unnamed.svg";
+
 
 // Data semua kantin
 const kantinData = [
@@ -19,6 +20,7 @@ const kantinData = [
     title: "Kantin BioGeo",
     description:
       "Kantin favorit mahasiswa FMIPA dengan suasana sejuk dan harga terjangkau. Banyak pilihan makanan berat dan ringan.",
+      
   },
   {
     id: 2,
@@ -42,7 +44,7 @@ const kantinData = [
       "Kantin di area Biologi yang dikelilingi pepohonan rindang, cocok buat makan sambil istirahat di siang hari.",
   },
 ];
-
+console.log("img: ", Biogeo)
 export const Frame = () => {
   const navigate = useNavigate();
 
